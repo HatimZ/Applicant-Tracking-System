@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="shortcut icon" href="pic.PNG" />
+  <title>
+    Job Application
+  </title>
+</head>
+<body>
+
+<h1>Please fill out the form below</h1>
+
+<form action="/apply/get_experience/" method = "post" style="text-align: center; ">
+  <label for="Username">Enter Username</label>
+  <input type="text" id="Experience" name="username" placeholder="username">
+  <br><br>
+  <label for="email">Please enter a valid email</label>
+  <input type= "email" id="email" name="email" placeholder="email">
+  <br><br>
+  <label for="password">password : </label>
+  <input type="password" id="password" placeholder="password"><br>
+  <p>Select your gender</p>
+  <input type="radio" name="gender" value="male" id="option1">
+  <label for="option1">Male</label><br>
+  <input type="radio" name="gender" value="female" id="option2">
+  <label for="option1">Female</label><br>
+  <input type="radio" name="gender" value="other" id="option3">
+  <label for="option1">Other</label><br>
+
+  <br><br>
+
+  <label for="Visa">Security Question</label>
+  <select name="visa_status" id="Visa">
+    <option value="false">Valid UAE work visa</option>
+    <option value="false">Not valid visa</option>
+    <option value="true">Valid residence permit</option>
+  </select>
+<br>
+
+<input type="submit" value="Submit Form">
+
+
+</form>
+
+</body>
+</html>

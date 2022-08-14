@@ -1,0 +1,95 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+  <link rel="shortcut icon" href="pic.PNG" />
+  <title>Job Application</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+  <meta name="viewport" , content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="container">
+        <div class="title"> Candidate Information form</div>
+        <form action="/apply/get_form/" method = "post" enctype="multipart/form-data">
+            <div class="user-details">
+                <div class="input-box">
+                    <span class="details"> First Name *</span>
+                    <input type="text" name="first-name" placeholder="Enter your First Name" required>
+                </div>
+                <div class="input-box">
+                    <span class="details"> Last Name *</span>
+                    <input type="text" name="last-name" placeholder="Enter your Last Name" required>
+                </div>
+                <div class="input-box">
+                    <span class="details"> Experience *</span>
+                   <select name="experience-level" id="experience-level" required>
+                   <option value="" disabled selected hidden> Select an option </option>
+                   <option value="0"> Less then 1 year</option>
+                   <option value="1">  1 year </option>
+                   <option value="2">  2 year </option>
+                   <option value="3">  3 year </option>
+                   </select>
+                </div>
+                <div class="input-box">
+                    <span class="details"> Visa Status *</span>
+                    <select name="visa-status" id="visa-status" required>
+                        <option value="" disabled selected hidden>Select an option</option>
+                        <option value="0"> unvalid </option>
+                        <option value="1"> valid </option>
+                        </select>
+                </div>
+                <div class="input-box">
+                    <span class="details"> Email *</span>
+                    <input type="email" name='email' placeholder="Enter your email" required>
+                </div>
+                <div class="input-box">
+                    <span class="details"> Phone Number </span>
+                    <input type="number" name= 'ph-number' placeholder="Enter your Phone">
+                </div>
+                <div class="input-box">
+                    <span class="details"> Salary Expectation </span>
+                    <input type="number" name='salary-expect' placeholder="Enter your Salary Epectation in $" >
+                </div>
+                <div class="input-box">
+                    <span class="details"> Current Employment Status *</span>
+                    <select name="employment-status" id="employment-status" required>
+                        <option value="" disabled selected hidden>Select an option</option>
+                        <option value="0"> Employed </option>
+                        <option value="1"> UnEmployed </option>
+                        </select>
+                </div>
+            </div>        
+            <div class="gender-details">
+                <input type="radio" name="gender" id="dot-1">
+                <input type="radio" name="gender" id="dot-2">
+                <input type="radio" name="gender" id="dot-3">
+                <span class="gender-title">Gender</span>
+                <div class="category">
+                    <label for="dot-1">
+                        <span class="dot one"></span>
+                        <span class="gender">Male</span>
+                    </label>
+                    <label for="dot-2">
+                        <span class="dot two"></span>
+                        <span class="gender">Female</span>
+                    </label>
+                    <label for="dot-3">
+                        <span class="dot three"></span>
+                        <span class="gender">Prefer not to say</span>
+                    </label>
+                </div>
+            </div>
+              <div class="upload">
+                <span class="upload-title"> Please upload resume/CV in pdf or docx *</span>
+                <br>
+                <input type="file" name="resume">     
+              </div>
+              <div class="button">
+                <input type="submit" value="Submit">
+              </div>
+        </form>
+        </div>
+        </div>
+      </body>
+      </html>
