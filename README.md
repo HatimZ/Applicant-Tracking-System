@@ -122,8 +122,8 @@ Renders an HTML form that takes applicant information and CV/Resume as a pdf.
 | `gender `      | `string` | gender |
 | `resume `      | `string` | **Required**. User name |
 
-The API saves user in a local Postgres table. Passwords are not saved.
-The user enters details through a form.
+The API saves user in a local Postgres table. There are two tables, one that saves the resume and other that saves all the other info.
+The resume table id is a foreign key in the candidate-tb so it is accessed from their.
 
 #### Last Page
 
@@ -131,7 +131,7 @@ The user enters details through a form.
   GET /apply/get_ending/
 ```
 After the form is submitted the user is shown an ending page
-where he is told to wait for the compnaies response
+where he is told to wait for the company's  response
 
 ## 🛠 Skills
 Python , 
