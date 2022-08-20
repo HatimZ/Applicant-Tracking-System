@@ -133,4 +133,9 @@ The user enters details through a form.
 After the form is submitted the user is shown an ending page
 where he is told to wait for the compnaies response
 
+## 🛠 Skills
+Python , 
+Django ,
+Postgres ,
+Database Design.
 
