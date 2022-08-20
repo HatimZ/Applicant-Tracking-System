@@ -93,3 +93,44 @@ Run the local server
   python manage.py runserver
 ```
 
+## API Reference
+
+#### Form
+
+```http
+  GET /apply/get_form
+```
+
+Renders an HTML form that takes applicant information and CV/Resume as a pdf.
+
+#### Submit data to database
+
+```http
+  POST /apply/get_form
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `email `      | `string` | **Required**.valid email |
+| `firstName `      | `string` | **Required**. User name |
+| `lastName `      | `string` | **Required**.valid email |
+| `experience-level `      | `string` | **Required**. experience-level |
+| `visa-status `      | `string` | **Required** visa-status |
+| `salary-expect `      | `string` | salary-expect |
+| `ph-no `      | `string` | ph-no  |
+| `employment-status `      | `string` | **Required** employment-status |
+| `gender `      | `string` | gender |
+| `resume `      | `string` | **Required**. User name |
+
+The API saves user in a local Postgres table. Passwords are not saved.
+The user enters details through a form.
+
+#### Last Page
+
+```http
+  GET /apply/get_ending/
+```
+After the form is submitted the user is shown an ending page
+where he is told to wait for the compnaies response
+
+
