@@ -125,6 +125,19 @@ Renders an HTML form that takes applicant information and CV/Resume as a pdf.
 The API saves user in a local Postgres table. There are two tables, one that saves the resume and other that saves all the other info.
 The resume table id is a foreign key in the candidate-tb so it is accessed from their.
 
+#### Retreive data of a single Candidate based on their email address.
+
+```http
+  GET   /api/details/hatim.zahid1996@gmail.com
+```
+
+![image](https://user-images.githubusercontent.com/63000127/186444307-37ba8bcd-905b-4372-bf67-70ebe3e7f98a.png)
+
+
+
+The data is retreived with the help of a Serializer Class. Hence Django Rest Framework is used.
+
+
 #### Last Page
 
 ```http
