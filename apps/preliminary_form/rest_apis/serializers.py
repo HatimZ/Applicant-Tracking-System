@@ -8,7 +8,7 @@ from apps.preliminary_form.models import FormEntry
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = FormEntry
-        fields = ['first_name', 'last_name' , 'email_address' , 'experience' , 'visa_status']
+        fields = ['first_name', 'last_name' , 'email_address' , 'experience' , 'visa_status' , 'salary_expect' , 'employment_status' , 'gender' , 'ph_number']
 
 
 
