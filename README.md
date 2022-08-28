@@ -12,6 +12,9 @@ API's(SQL) to select specific candidates for jobs.
 A Automatic Ranking System that ranks the candidates based on the
 phrases and keywords in their CV's will be implemented in this app.
 
+# Frameworks
+ # Django Rest Framework - (Serializers)  
+
 
 
 
